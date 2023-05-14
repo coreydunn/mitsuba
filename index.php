@@ -18,7 +18,7 @@ function main()
 	// try to open database
 	try
 	{
-		$db=new SQLite3("$server_root/db/posts.db");
+		$db=new SQLite3("$server_root/db/boards.db");
 	}
 	catch(Exception $e)
 	{
@@ -27,7 +27,7 @@ function main()
 	}
 
 	// Select all texts and print from database
-	$res=$db->query('select rowid,* from data;');
+	$res=$db->query('select rowid,* from b;');
 	while($row=$res->fetchArray())
 	{
 		//var_dump($row);
@@ -59,8 +59,8 @@ function main()
 			// Insert new post into database
 			try
 			{
-				//$db->exec("insert into data values ('ok ok ok');");
-				$s=$db->prepare("insert into data values ('$text',date('now'),time('now'));");
+				//$db->exec("insert into b values ('ok ok ok');");
+				$s=$db->prepare("insert into b values ('$text',date('now'),time('now'));");
 				$s->execute();
 
 				//header("Location: $server_proto://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
