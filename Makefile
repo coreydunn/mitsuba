@@ -1,6 +1,12 @@
 PREFIX=   /var/www
 OBJS=     *php server_config.ini db db/posts.db
 
+#
+# These parameters will be used
+# to generate server_config.ini,
+# which is used by mitsuba when
+# redirecting the client.
+#
 FQDN=     example.local
 PROTO=    http
 PORT=     8888
