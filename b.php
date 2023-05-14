@@ -1,6 +1,6 @@
 <?php		
 //echo "<body style=\"display:flex;flex-direction:column;\">";
-echo "<style>body{font-family:sans-serif;color:white;background:#eef2fe;}</style>";
+echo "<style>body{font-family:sans-serif;background:#eef2fe;}</style>";
 echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
 
 // colors: ( fg: #d8daef | bg: #eef2fe )
