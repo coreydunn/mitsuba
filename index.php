@@ -10,6 +10,7 @@ function main()
 	$server_info=parse_ini_file("server_config.ini");
 	$server_fqdn=$server_info['fqdn'];
 	$server_port=$server_info['port'];
+	$server_proto=$server_info['proto'];
 	$server_root=$server_info['root'];
 
 	//echo "user:".exec('whoami')."<br>";
@@ -62,8 +63,8 @@ function main()
 				$s=$db->prepare("insert into data values ('$text',date('now'),time('now'));");
 				$s->execute();
 
-				//header("Location: https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
-				header("Location: http://$server_fqdn:$server_port/done.php");
+				//header("Location: $server_proto://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+				header("Location: $server_proto://$server_fqdn:$server_port/done.php");
 				exit;
 
 			}
