@@ -1,5 +1,5 @@
 PREFIX=   /var/www
-OBJS=     *php server_config.ini db db/posts.db
+OBJS=     *php server_config.ini db
 
 #
 # These parameters will be used
