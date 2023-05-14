@@ -1,4 +1,8 @@
-# Testing
+## Prerequisites
+
+You will need to install sqlite3, php, and httpd (apache2).
+
+## Testing
 
 You will need to create an SQLite3 database (by default located in <ROOT>/db/boards.db) with the schema `CREATE TABLE b (text string,_date string,_time string)`.
 
@@ -6,7 +10,7 @@ Then, either handwrite the file server_config.ini, or create it via `make` after
 
 To test without installing, change directories to the test install and run `php -S localhost:8888`.
 
-# Installation
+## Installation
 
 To install, edit the Makefile parameters for your server:
 
