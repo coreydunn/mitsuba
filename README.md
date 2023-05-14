@@ -4,7 +4,7 @@ You will need to create an SQLite3 database (by default located in <ROOT>/db/boa
 
 Then, either handwrite the file server_config.ini, or create it via `make` after setting the make parameters and setting ROOT to ".".
 
-To test without installing, change directories to mitsuba's source code and run `php -S localhost:8888`.
+To test without installing, change directories to the test install and run `php -S localhost:8888`.
 
 # Installation
 
