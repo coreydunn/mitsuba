@@ -7,8 +7,12 @@ all:
 	@echo '    install'
 
 install:
-	[ ! -d $(PREFIX) ] && mkdir $(PREFIX)
-	[ ! -d $(PREFIX)/$(FQDN) ] && mkdir $(PREFIX)/$(FQDN)
+	if [ ! -d $(PREFIX) ]; then \
+		mkdir $(PREFIX); \
+	fi
+	if [ ! -d $(PREFIX)/$(FQDN) ]; then \
+		mkdir $(PREFIX)/$(FQDN); \
+	fi
 	for x in $(OBJS); do \
 		if [ -d $$x ]; then \
 			mkdir $(PREFIX)/$(FQDN)/$$x; \
